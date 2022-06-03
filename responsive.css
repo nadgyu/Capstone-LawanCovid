@@ -1,0 +1,9 @@
+@media only screen and (min-width: 992px) {
+.price-table-info{
+  border-radius: 1em 0 0 1em;
+}
+
+.price-table-danger{
+  border-radius: 0 1em 1em 0;
+}
+}

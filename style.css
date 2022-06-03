@@ -11,6 +11,75 @@ body {
   color: #2d303d;
 }
 
+/* ============= Data Monitoring Covid ================ */
+/* data monitoring covid */
+
+.container-fluid.bg-orange{
+  background-color: #F16C4D;
+}
+
+.data-monitoring{
+  width: 75vw;
+}
+
+.price-table{
+  border-radius: 1em;
+  margin: 1em 0;
+}
+
+.price-table-header{
+  color: white;
+}
+
+.price-table h3{
+  font-size: 2em;
+  font-weight: 400;
+  padding: 1em 0;
+  margin: 0;
+}
+
+.price-table-category{
+  display: block;
+  padding: 1em;
+}
+
+.price-table-info{
+  background-color: #0E4E6B;
+}
+
+.price-table-info h3{
+  background-color: #126286;
+}
+
+.price-table-danger{
+  background-color: #C3362B;
+}
+
+.price-table-danger h3{
+  background-color: #F44336;
+}
+
+table{
+  background-color: white;
+}
+
+.badge-pill-info{
+  background-color: #0E4E6B;
+}
+
+.text-danger{
+  color: #dc3545;
+}
+
+.text-success{
+  background-color: #0b7323;
+}
+
+
+
+
+
+
 /* ============= Card ================= */
 
 .container {

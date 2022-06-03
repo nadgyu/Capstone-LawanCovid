@@ -12,11 +12,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="responsive.css">
     <title>LAWAN COVID</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
-
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+  </head>
+    <body>
     <header>
       <nav>
       <div class="nav-hospital">
@@ -48,10 +52,75 @@
            </div>
       </article>
   </main>
+
+  <!-- data monitoring covid -->
+  <section class="container-fluid text-center d-flex justify-content-center bg-orange">
+    <article class="data-monitoring">
+      <div class="row g-0">
+        <div class="col-lg-6">
+          <div class="price-table price-table-info">
+            <header class="price-table-header">
+              <span class="price-table-category">SPESIMEN DIPERIKSA</span>
+                <h3>1.23 <sub>Positif Rate</sub></h3>
+            </header>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th>
+                    <span class="badge rounded-pill badge-pill-info"> <i class="fa fa-arrow-up"></i> 249</span><br> 1.270.304
+                  </th>
+                  <th>
+                    <span class="badge rounded-pill badge-pill-info"> <i class="fa fa-arrow-up"></i> 245</span>
+                    <br>
+                    908.241
+                  </th>
+                </tr>
+                <tr>
+                  <td>Jumlah Spesimen Diperiksa</td>
+                  <td>Jumlah Orang Diperiksa</td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="price-table price-table-danger">
+            <header class="price-table-header">
+              <span class="price-table-category">Kasus Terkonfirmasi Covid-19</span>
+              <h3>
+                103.828 <sub>KASUS POSITIF</sub>
+              </h3>
+            </header>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th class="text-danger"> 45 (0.04%) </th>
+                  <th>
+                    <span class="badge rounded-pill bg-secondary"> <i class="fa fa-arrow-up"></i> 0</span><br>
+                    2.349 (2.26%)
+                  </th>
+                  <th class="text-success">
+                    <span class="badge rounded-pill bg-success"> <i class="fa fa-arrow-up"></i> 0</span><br>
+                    101.434 (97.69%)
+                  </th>
+                </tr>
+                <tr>
+                  <td rowspan="1"  class="fw-bold text-danger">Kasus Aktif</td>
+                  <td rowspan="1" class="fw-bold">Meninggal</td>
+                  <td rowspan="1" class="fw-bold">Sembuh</td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
   
-    <title>Card Slider</title>
-  </head>
-  <body>
     <section class="container">
       <div class="card">
         <div class="card-image img-1"></div>
