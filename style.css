@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  background-color: #f5f5f6;
+  color: #2d303d;
+}
+
+/* ============= Card ================= */
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  font-family: "Red Hat Display", sans-serif;
+  width: 280px;
+  margin: 15px;
+  border-radius: 20px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:active {
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.card h2 {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.card p {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card a {
+  background-color: white;
+  font-weight: 600;
+  color: #f37225;
+  text-decoration: none;
+  display: block;
+  margin: 20px;
+}
+
+.card-image {
+  background-color: aqua;
+  height: 140px;
+  margin-bottom: 15px;
+  border-radius: 20px 20px 0px 0px;
+  background-size: cover;
+}
+
+.img-1 {
+  background-image: url(https://asset.kompas.com/crops/g2z1_y4aL_f-WQR5ro5oaQ-eqYs=/5x0:5038x3355/750x500/data/photo/2020/11/13/5fae347fcf280.jpg);
+}
+
+.img-2 {
+  background-image: url(https://www.prudential.co.id/export/sites/prudential-id/id/.galleries/images/page-title/tips-olahraga-saat-pandemi-1366x560.jpg);
+}
+
+.img-3 {
+  background-image: url(https://asset.kompas.com/crops/MTaDZiKTdryZTpipB2DSuTgO2rE=/66x9:956x602/750x500/data/photo/2022/02/04/61fd162e6b868.jpg);
+}
+
+.img-4 {
+  background-image: url(https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2022/04/29081331/Ini-Cara-Memulihkan-Indra-Penciuman-Setelah-Terkena-COVID-19.jpg.webp);
+}
+
+/* ============= Button Next ================= */
+.button-next {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: #f37225;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 12%;
+  display: block;
+  margin-left: auto;
+}
+/* ============= Footer ================= */
+
+footer {
+  font-family: "Red Hat Display", sans-serif;
+  color: white;
+  font-size: 16px;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  background-color: #f37225;
+}
+
+/* ============= Responsive ================= */
