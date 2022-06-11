@@ -24,12 +24,12 @@ body {
   z-index: 99;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
- 
+
 .app-bar .app-bar__menu {
   display: flex;
   align-items: center;
 }
- 
+
 .app-bar .app-bar__menu button {
   background-color: transparent;
   border: none;
@@ -37,7 +37,7 @@ body {
   padding: 8px;
   cursor: pointer;
 }
- 
+
 .app-bar .app-bar__brand {
   display: flex;
   align-items: center;
@@ -53,11 +53,11 @@ body {
   background-color: white;
   overflow: hidden;
 }
- 
+
 .app-bar .app-bar__navigation.open {
   left: 0;
 }
- 
+
 .app-bar .app-bar__navigation ul li a {
   display: inline-block;
   text-decoration: none;
@@ -66,142 +66,136 @@ body {
   margin-bottom: 5px;
   width: 100%;
   font-weight: bold;
-  color:#2D303D;
+  color: #2d303d;
 }
 
-.app-bar__navigation ul li{
+.app-bar__navigation ul li {
   list-style: none;
 }
 
 .app-bar .app-bar__navigation.open ul li a:hover {
-    color:#F37225;
+  color: #f37225;
 }
 .app-bar .app-bar__navigation ul li a:hover {
-    color:#F37225;
+  color: #f37225;
 }
 
 /* BERANDA */
 
 .article-beranda {
-    width: 100%;
-    min-height: 80vh;
-    background-color: #f5f5f6;
+  width: 100%;
+  min-height: 80vh;
+  background-color: #f5f5f6;
 }
 
 .beranda {
-    display: flex;
-    padding: 86px;
-    overflow: auto;
-    background-color:#f5f5f6;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  padding: 86px;
+  overflow: auto;
+  background-color: #f5f5f6;
+  justify-content: space-around;
+  align-items: center;
 }
 
-main h1, p {
-    font-family:"red hat display";
+main h1,
+p {
+  font-family: "red hat display";
 }
 
 main h1 {
-    font-size: 40px;
-    color:#2D303D;
-    margin: 30px 0px;
-    text-align: left;
+  font-size: 40px;
+  color: #2d303d;
+  margin: 30px 0px;
+  text-align: left;
 }
 
-
 main p {
-   font-size: 20px;
-   font-weight: 500;
-   color: #2D303D;
-   margin: 20px 0;
-   text-align: left;
-   padding: 0px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #2d303d;
+  margin: 20px 0;
+  text-align: left;
+  padding: 0px;
 }
 
 .content-left {
-    width: 35%;
+  width: 35%;
 }
 
-
 footer {
-    padding: 20px;
-    color:#F5F5F6;
-    font-family: "red hat display";
-    background-color:#F37225;
-    text-align: center;
-    font-weight: bold;
-} 
+  padding: 20px;
+  color: #f5f5f6;
+  font-family: "red hat display";
+  background-color: #f37225;
+  text-align: center;
+  font-weight: bold;
+}
 
 /* ============= Data Monitoring Covid ================ */
 
-.container-fluid.bg-orange{
-  background-color: #F16C4D;
+.container-fluid.bg-orange {
+  background-color: #f16c4d;
   min-height: 60vh;
   display: flex;
   align-items: center;
 }
 
-.data-monitoring{
+.data-monitoring {
   width: 75vw;
 }
 
-.price-table{
+.price-table {
   border-radius: 1em;
   margin: 1em 0;
 }
 
-.price-table-header{
+.price-table-header {
   color: white;
 }
 
-.price-table h3{
+.price-table h3 {
   font-size: 2em;
   font-weight: 400;
   padding: 1em 0;
   margin: 0;
 }
 
-.price-table-category{
+.price-table-category {
   display: block;
   padding: 1em;
 }
 
-.price-table-info{
-  background-color: #0E4E6B;
+.price-table-info {
+  background-color: #0e4e6b;
 }
 
-.price-table-info h3{
+.price-table-info h3 {
   background-color: #126286;
 }
 
-.price-table-danger{
-  background-color: #C3362B;
+.price-table-danger {
+  background-color: #c3362b;
 }
 
-.price-table-danger h3{
-  background-color: #F44336;
+.price-table-danger h3 {
+  background-color: #f44336;
 }
 
-table{
+table {
   background-color: white;
 }
 
-.badge-pill-info{
-  background-color: #0E4E6B;
+.badge-pill-info {
+  background-color: #0e4e6b;
 }
 
-.text-danger{
+.text-danger {
   color: #dc3545;
 }
 
-.text-success{
+.text-success {
   background-color: #0b7323;
 }
-
-
-
-
-
 
 /* ============= Card ================= */
 
@@ -308,7 +302,7 @@ footer {
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.gambar{
+.gambar {
   display: block;
   margin-left: 13px;
   margin-top: 6px;

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const Artikel = {
   async render() {
     return `
