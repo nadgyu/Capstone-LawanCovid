@@ -1,3 +1,6 @@
+import CovidApiSource from '../../data/covid-api-source';
+import createGlobalCovidTemplate from '../templates/template-creator';
+
 const Beranda = {
   async render() {
     return `
@@ -29,11 +32,9 @@ const Beranda = {
                     <thead>
                       <tr>
                         <th>
-                          <span class="badge rounded-pill badge-pill-info"> <i class="fa fa-arrow-up"></i> 249</span><br> 1.270.304
+                          1.270.304
                   </th>
                   <th>
-                    <span class="badge rounded-pill badge-pill-info"> <i class="fa fa-arrow-up"></i> 245</span>
-                    <br>
                     908.241
                   </th>
                 </tr>
@@ -50,8 +51,8 @@ const Beranda = {
           <div class="price-table price-table-danger">
             <div class="price-table-header">
               <span class="price-table-category">Kasus Terkonfirmasi Covid-19</span>
-              <h3>
-                103.828 <sub>KASUS POSITIF</sub>
+              <h3 class="confirmed-covid">
+              <sub>KASUS POSITIF</sub>
               </h3>
             </div>
             <div class="table-responsive">
@@ -59,13 +60,10 @@ const Beranda = {
                 <thead>
                   <tr>
                     <th class="text-danger"> 45 (0.04%) </th>
-                    <th>
-                      <span class="badge rounded-pill bg-secondary"> <i class="fa fa-arrow-up"></i> 0</span><br>
-                      2.349 (2.26%)
+                    <th class="death-covid">
+                      
                     </th>
-                    <th class="text-success">
-                    <span class="badge rounded-pill bg-success"> <i class="fa fa-arrow-up"></i> 0</span><br>
-                    101.434 (97.69%)
+                    <th class="text-success recovered-covid">
                   </th>
                 </tr>
                 <tr>
@@ -149,7 +147,17 @@ const Beranda = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const confirmedCovid = await CovidApiSource.ConfirmedCovidApi();
+    const confirmedCovidContainer = document.querySelector('.confirmed-covid');
+    confirmedCovidContainer.innerHTML += createGlobalCovidTemplate(confirmedCovid.toLocaleString());
+
+    const deathCovid = await CovidApiSource.DeathCovidApi();
+    const deathCovidContainer = document.querySelector('.death-covid');
+    deathCovidContainer.innerHTML += createGlobalCovidTemplate(deathCovid.toLocaleString());
+
+    const recoveredCovid = await CovidApiSource.RecoveredCovidApi();
+    const recoveredCovidContainer = document.querySelector('.recovered-covid');
+    recoveredCovidContainer.innerHTML += createGlobalCovidTemplate(recoveredCovid.toLocaleString());
   },
 };
 
