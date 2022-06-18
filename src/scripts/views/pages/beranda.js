@@ -1,5 +1,6 @@
+/* eslint-disable max-len */
 import CovidApiSource from '../../data/covid-api-source';
-import createGlobalCovidTemplate from '../templates/template-creator';
+import createCovidDataTemplate from '../templates/template-creator';
 
 const Beranda = {
   async render() {
@@ -16,31 +17,32 @@ const Beranda = {
               </div>
            </div>
       </article>
-      
-      <!-- data monitoring covid -->
+        <!-- data monitoring covid -->
       <section class="container-fluid text-center d-flex justify-content-center bg-orange">
         <article class="data-monitoring">
           <div class="row g-0">
             <div class="col-lg-6">
               <div class="price-table price-table-info">
                 <div class="price-table-header">
-                  <span class="price-table-category">SPESIMEN DIPERIKSA</span>
-                  <h3>1.23 <sub>Positif Rate</sub></h3>
-                </div>
-                <div class="table-responsive">
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th>
-                          1.270.304
-                  </th>
-                  <th>
-                    908.241
+                  <span class="price-table-category"></span>
+                  <h3>
+                Data Global
+                  </h3>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th class="text-danger global-confirmed-covid"></th>
+                    <th class="global-death-covid">
+                    </th>
+                    <th class="text-success global-recovered-covid">
                   </th>
                 </tr>
                 <tr>
-                  <td>Jumlah Spesimen Diperiksa</td>
-                  <td>Jumlah Orang Diperiksa</td>
+                  <td rowspan="1"  class="fw-bold text-danger">Terkonfirmasi</td>
+                  <td rowspan="1" class="fw-bold">Meninggal</td>
+                  <td rowspan="1" class="fw-bold">Sembuh</td>
                 </tr>
               </thead>
             </table>
@@ -50,24 +52,23 @@ const Beranda = {
         <div class="col-lg-6">
           <div class="price-table price-table-danger">
             <div class="price-table-header">
-              <span class="price-table-category">Kasus Terkonfirmasi Covid-19</span>
-              <h3 class="confirmed-covid">
-              <sub>KASUS POSITIF</sub>
-              </h3>
+              <span class="price-table-category"></span>
+              <h3>
+                Data Indonesia
+                  </h3>
             </div>
             <div class="table-responsive">
               <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th class="text-danger"> 45 (0.04%) </th>
-                    <th class="death-covid">
-                      
+                    <th class="text-danger indo-confirmed-covid"></th>
+                    <th class="indo-death-covid">
                     </th>
-                    <th class="text-success recovered-covid">
+                    <th class="text-success indo-recovered-covid">
                   </th>
                 </tr>
                 <tr>
-                  <td rowspan="1"  class="fw-bold text-danger">Kasus Aktif</td>
+                  <td rowspan="1"  class="fw-bold text-danger">Terkonfirmasi</td>
                   <td rowspan="1" class="fw-bold">Meninggal</td>
                   <td rowspan="1" class="fw-bold">Sembuh</td>
                 </tr>
@@ -79,7 +80,7 @@ const Beranda = {
       </div>
     </article>
   </section>
-
+      
   <div class="box"><br>
     <img class="gambar" src="/images/corona-icon.png">
     <h2>Apa itu COVID-19</h2>
@@ -147,17 +148,29 @@ const Beranda = {
   },
 
   async afterRender() {
-    const confirmedCovid = await CovidApiSource.ConfirmedCovidApi();
-    const confirmedCovidContainer = document.querySelector('.confirmed-covid');
-    confirmedCovidContainer.innerHTML += createGlobalCovidTemplate(confirmedCovid.toLocaleString());
+    const globalConfirmedCovid = await CovidApiSource.globalConfirmedCovidApi();
+    const globalConfirmedCovidContainer = document.querySelector('.global-confirmed-covid');
+    globalConfirmedCovidContainer.innerHTML += createCovidDataTemplate(globalConfirmedCovid.toLocaleString());
 
-    const deathCovid = await CovidApiSource.DeathCovidApi();
-    const deathCovidContainer = document.querySelector('.death-covid');
-    deathCovidContainer.innerHTML += createGlobalCovidTemplate(deathCovid.toLocaleString());
+    const globalDeathCovid = await CovidApiSource.globalDeathCovidApi();
+    const globalDeathCovidContainer = document.querySelector('.global-death-covid');
+    globalDeathCovidContainer.innerHTML += createCovidDataTemplate(globalDeathCovid.toLocaleString());
 
-    const recoveredCovid = await CovidApiSource.RecoveredCovidApi();
-    const recoveredCovidContainer = document.querySelector('.recovered-covid');
-    recoveredCovidContainer.innerHTML += createGlobalCovidTemplate(recoveredCovid.toLocaleString());
+    const globalRecoveredCovid = await CovidApiSource.globalRecoveredCovidApi();
+    const globalRecoveredCovidContainer = document.querySelector('.global-recovered-covid');
+    globalRecoveredCovidContainer.innerHTML += createCovidDataTemplate(globalRecoveredCovid.toLocaleString());
+
+    const indoConfirmedCovid = await CovidApiSource.indoConfirmedCovidApi();
+    const indoConfirmedCovidContainer = document.querySelector('.indo-confirmed-covid');
+    indoConfirmedCovidContainer.innerHTML += createCovidDataTemplate(indoConfirmedCovid.toLocaleString());
+
+    const indoDeathCovid = await CovidApiSource.indoDeathCovidApi();
+    const indoDeathCovidContainer = document.querySelector('.indo-death-covid');
+    indoDeathCovidContainer.innerHTML += createCovidDataTemplate(indoDeathCovid.toLocaleString());
+
+    const indoRecoveredCovid = await CovidApiSource.indoRecoveredCovidApi();
+    const indoRecoveredCovidContainer = document.querySelector('.indo-recovered-covid');
+    indoRecoveredCovidContainer.innerHTML += createCovidDataTemplate(indoRecoveredCovid.toLocaleString());
   },
 };
 

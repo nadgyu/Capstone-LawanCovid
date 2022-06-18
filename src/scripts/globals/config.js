@@ -1,6 +1,6 @@
 const CONFIG = {
-  // KEY: 'YOUR_API_KEY',
-  BASE_URL: 'https://covid19.mathdro.id/api/',
+  GLOBAL_COVID_API_URL: 'https://covid19.mathdro.id/api/',
+  INDO_COVID_API_URL: 'https://covid19.mathdro.id/api/countries/indonesia',
 };
 
 export default CONFIG;

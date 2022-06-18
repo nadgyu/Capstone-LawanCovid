@@ -50,6 +50,11 @@
        text-align: center;
    }
 
+   #img{
+      /* display: none; */
+      width: 100%;
+    }
+
 }
 
 @media screen and (max-width:1024px) {

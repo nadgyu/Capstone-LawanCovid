@@ -1,5 +1,3 @@
-// import CONFIG from '../../globals/config';
+const createCovidDataTemplate = (image) => `${image}`;
 
-const createGlobalCovidTemplate = (image) => `${image}`;
-
-export default createGlobalCovidTemplate;
+export default createCovidDataTemplate;
