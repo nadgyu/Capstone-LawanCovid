@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const DataPantauan = {
   async render() {
     return `

@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable linebreak-style */
 import CovidApiSource from '../../data/covid-api-source';
 import createCovidDataTemplate from '../templates/template-creator';
 
